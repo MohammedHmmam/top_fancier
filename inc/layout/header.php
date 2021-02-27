@@ -16,5 +16,6 @@ require_once("../../initialize.php");
     <script src=<?= JS_PATH . "/jquery-1.11.1.min.js" ?>></script>
     <script src=<?= JS_PATH . "/jquery.slim.min.js" ?>></script>
     <script src=<?= JS_PATH . "/bootstrap.min.js" ?>></script>
+    <script src=<?= JS_PATH . "/popper.min.js" ?>></script>
 </head>
 <body>
