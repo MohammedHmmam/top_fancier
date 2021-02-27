@@ -15,6 +15,6 @@ require_once("../../initialize.php");
     </style>
     <script src=<?= JS_PATH . "/jquery-1.11.1.min.js" ?>></script>
     <script src=<?= JS_PATH . "/jquery.slim.min.js" ?>></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src=<?= JS_PATH . "/bootstrap.min.js" ?>></script>
 </head>
 <body>
