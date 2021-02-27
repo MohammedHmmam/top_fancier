@@ -24,7 +24,7 @@ define("CSS_PATH" , LAYOUT_PATH . "\css");
 define("JS_PATH" , LAYOUT_PATH . "\js");
 
 
-echo VIEW_PATH;
+
 
 
 
