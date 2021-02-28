@@ -11,4 +11,6 @@ unset($_SESSION['email']);
 
 session_destroy();
 
+header("refresh:1;url=../view/login.php");
+
 ?>
