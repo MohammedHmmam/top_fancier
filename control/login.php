@@ -24,6 +24,7 @@ if(isset($_POST['username'],$_POST['password']) && !empty($_POST['username']) &&
                     //check password
                     if(password_verify($password , $user['password'])){
 
+                        $_SESSION['logged_in'] = true;
                         $_SESSION['user_id']    = $user['id'];
                         $_SESSION['username']   = $user['username'];
                         $_SESSION['email']      = $user['email'];
