@@ -50,7 +50,7 @@
           <li><a href="#">Change Email</a></li>
           <li><a href="#">Update Nickname</a></li>
           <li class="divider"></li>
-          <li><a href="../../control/logout.php">Logout</a></li>
+          <li><a href="../control/logout.php">Logout</a></li>
         </ul>
       </li>
     </ul>
