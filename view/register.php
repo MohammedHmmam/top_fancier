@@ -13,7 +13,7 @@
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form class="form-horizontal" action='#' method="POST">
+<form class="form-horizontal" action="../control/register.php" method="POST">
   <fieldset>
     <div id="legend">
       <legend class="">Register</legend>
