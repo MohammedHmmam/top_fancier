@@ -12,7 +12,7 @@ if(isset($_POST['username'], $_POST['email'], $_POST['password'] , $_POST['passw
     $mobile = $_POST['mobile'];
 
     #check valid username
-    if(preg_match("/^[a-z0-9-_. ]*$/i" , $username)){
+    if(preg_match("/^[a-z0-9-_.]*$/i" , $username)){
 
         //Check username length
         if(strlen($username) >= 3 && strlen($username) <= 50){
