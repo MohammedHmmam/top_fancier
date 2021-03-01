@@ -15,7 +15,7 @@ if(isset($_POST['username'], $_POST['email'], $_POST['password'] , $_POST['passw
     if(preg_match("/^[a-z0-9-_.]*$/i" , $username)){
 
         //Check username length
-        if(strlen($username) >= 3 && strlen($username) <= 50){
+        if(has_length($username , ['min'=>3, 'max'=>50])){
 
              //Check if user exists in Database
             $stmt = $pdo->prepare("SELECT * FROM fancier WHERE username = :username");
@@ -35,8 +35,8 @@ if(isset($_POST['username'], $_POST['email'], $_POST['password'] , $_POST['passw
                         //Check if Mobile number valid
                         if(preg_match('/^[+0-9]*$/' , $mobile)){
                             
-                            //Check mobile number length 
-                            if(strlen($mobile) >= 11 && strlen($mobile) <= 20){
+                            //Check mobile number length 11-20
+                            if(has_length($mobile , ['min'=>11 , 'max'=>20])){
 
                                 //Check if Mobile number Exists
                                 $stmt = $pdo->prepare("SELECT * FROM fancier WHERE mobile =:mobile");
@@ -44,8 +44,8 @@ if(isset($_POST['username'], $_POST['email'], $_POST['password'] , $_POST['passw
                                 $stmt->execute();
                                 if(!$stmt->rowCount()){
 
-                                    //check password length
-                                    if(strlen($password) >= 8 && strlen($password) <= 32){
+                                    //check password length8-32
+                                    if(has_length($password , ['min'=>8 , 'max'=>32])){
 
                                         //check if password match
                                         if($password === $password_confirm){
