@@ -20,7 +20,7 @@
     </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="home">
-        <form id="tab" action="../control/update_fancier_profile.php" method="POST">
+        <form id="tab" action="../control/update_fancier_profile.php" method="POST" class="form-horizontal">
             <label>First Name</label>
             <input type="text" value="" class="input-xlarge" name="first_name" placeholder="Mohammed">
             <label>Last Name</label>
