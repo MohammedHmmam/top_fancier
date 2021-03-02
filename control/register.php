@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../inc/initialize.php');
 
 if(isset($_POST['username'], $_POST['email'], $_POST['password'] , $_POST['password_confirm'], $_POST['mobile'] , $_POST['submit'])
@@ -60,7 +61,16 @@ if(isset($_POST['username'], $_POST['email'], $_POST['password'] , $_POST['passw
                                             $stmt->bindValue(":mobile" , $mobile , PDO::PARAM_STR);
                                             $stmt->execute();
                                             if($stmt->rowCount()){
-                                                echo "New fancier add succesfully";
+                                                echo "New fancier add succesfully , you will redirect to complete your Information!";
+                                                $crntuser = $pdo->prepare("SELECT * FROM fancier WHERE email = :email");
+                                                $crntuser->bindValue(":email" , $email , PDO::PARAM_STR);
+                                                $crntuser->execute();
+                                                $fancier = $crntuser->fetch();
+                                                $_SESSION['logged_in'] = true;
+                                                $_SESSION['user_id']    = $fancier['id'];
+                                                $_SESSION['username']   = $fancier['username'];
+                                                $_SESSION['email']      = $fancier['email'];
+                                                header("Refresh:1.5; url= ../view/update_fancier_profile.php");
                                             }else{
                                                 echo "An error Occured, Can not add new Fancier";
                                             }
